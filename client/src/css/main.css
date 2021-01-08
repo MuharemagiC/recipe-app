@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(189,198,150,0.6), rgba(189,198,150,0.6)), url("https://images.pexels.com/photos/4033636/pexels-photo-4033636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: top 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header > img {
+    width: 40px;
+    position: absolute;
+    top: 50px;
+    left: -15px;
+    transform: rotateZ(-15deg);
+    color: #305d35;
+    overflow: hidden;
+}
+
+.message {
+    color: snow;
+   margin-top: 200px;
+}
+
+.header > h1 {
+    margin-top: 60px;
+    font-size: 3rem;
+    color: #c62b27;
+}
+
+.wrapper {
+    width: 450px;
+    padding: 30px;
+}
+
+.wrapper .search-input {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .search-input input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid snow;
+    outline: none;
+    background: none;
+    color: #305d35;
+    font-size: 1.2rem;
+}
+
+
+
+.search-input input:focus ~ label,
+.search-input input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 0.9rem;
+}
+
+.wrapper .search-input label {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    color: #c62b27;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .search-input .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.search-input .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #305d35;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.search-input input:focus ~ .underline:before,
+.search-input input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.search-icon {
+    margin-right: 5px;
+    font-size: 0.90rem;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.add-button {
+    width: 200px;
+    height: 30px;
+    background: #305d35;
+    border: none;
+    font-size: 1rem;
+    color: snow;
+    outline: none;
+    transition: 0.4s ease-in;
+}
+
+.add-button:hover {
+    background-color: #c62b27;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 57vh;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+
+.wrapper-recipes {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-bottom: 25px;
+    width: 450px;
+    height: 20vh;
+    background: linear-gradient(rgba(48, 93, 53,0.3), rgba(48, 93, 53,0.3));
+    color: snow;
+    border: 4px solid snow;
+}
+
+.wrapper-recipes:hover {
+    cursor: pointer;
+}
+
+.wrapper-recipes > h1 {
+    margin-bottom: 10px;
+    color: #c62b27;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 14px 14px transparent;
+  border: solid 4px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 14px 14px #c62b27;
+  border: solid 4px transparent;
+  border-radius: 14px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+
+@media(max-width: 600px) {
+
+    body {
+        background-position: top left 20%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .wrapper {
+        width: 340px;
+    }
+
+    .wrapper-recipes {
+        width: 320px;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    .wrapper-recipes > h1 {
+        font-size: 1.6rem;
+    }
+
+    .wrapper-recipes > p {
+        font-size: 0.8rem;
+    }
+
+    .header > h1 {
+        font-size: 2.4rem;
+    }
+
+    .header > img {
+        width: 30px;
+        top: 53px;
+        left: -12px;
+    }
+
+    .button {
+    margin-top: 5px;
+}
+
+    .add-button {
+    width: 180px;
+    height: 30px;
+    }
+}
+
+@media(max-width: 374px) {
+     body {
+        background-position: top left 30%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .wrapper {
+        width: 220px;
+    }
+
+    .wrapper-recipes {
+        width: 220px;
+        overflow: hidden;
+        padding: 15px;
+    }
+
+    .wrapper-recipes > h1 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper-recipes > p {
+        font-size: 0.8rem;
+    }
+        .button {
+    margin-top: 5px;
+}
+
+    .add-button {
+    width: 180px;
+    height: 30px;
+    }
+}
+
+@media(min-width: 600px) {
+     body {
+        background-position: top left 15%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .wrapper {
+        width: 380px;
+    }
+
+    .wrapper-recipes {
+        width: 360px;
+        overflow: hidden;
+        padding: 15px;
+    }
+
+    .wrapper-recipes > h1 {
+        font-size: 1.8rem;
+    }
+
+    .wrapper-recipes > p {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width: 768px ){
+     body {
+        background-position: top left 10%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .wrapper {
+        width: 400px;
+    }
+
+    .wrapper-recipes {
+        width: 380px;
+        overflow: hidden;
+        padding: 18px;
+    }
+
+    .wrapper-recipes > p {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width: 992px){
+    .wrapper {
+        width: 420px;
+    }
+
+    .wrapper-recipes {
+        width: 420px;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .wrapper-recipes > p {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width: 1200px) {
+    .wrapper {
+        width: 420px;
+    }
+
+    .wrapper-recipes {
+        width: 450px;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .wrapper-recipes > p {
+        font-size: 1rem;
+    }
+}

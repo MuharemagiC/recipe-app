@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(189,198,150,0.6), rgba(189,198,150,0.6)), url("https://images.pexels.com/photos/4033636/pexels-photo-4033636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: top 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+    color: #c62b27;
+}
+
+.container > form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.wrapper {
+    width: 450px;
+    padding: 30px;
+}
+
+.wrapper .search-input {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .search-input input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid snow;
+    outline: none;
+    background: none;
+    color: #305d35;
+    font-size: 1.2rem;
+}
+
+
+
+.search-input input:focus ~ label,
+.search-input input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 0.9rem;
+}
+
+.wrapper .search-input label {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    color: #c62b27;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .search-input .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.search-input .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #305d35;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.search-input input:focus ~ .underline:before,
+.search-input input:valid ~ .underline:before {
+    transform: scaleX(1);
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.text-area > textarea {
+    resize: none;
+    margin-top: 15px;
+    width: 395px;
+    outline: none;
+    background: linear-gradient(rgba(48, 93, 53,0.3), rgba(48, 93, 53,0.3));
+    color: snow;
+    padding: 5px;
+    border: 4px solid snow;
+    font-size: 1rem;
+}
+
+.text-area > label {
+    position: absolute;
+    top: -10px;
+    left: 2px;
+    color: #c62b27;
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 350px;
+    margin-top: 20px;
+    width: 396px;
+    
+}
+
+.ingredients > h3 {
+    align-self: flex-start;
+    margin-left: 3px;
+    margin-top: 5px;
+    color: #c62b27;
+}
+
+.new {
+    flex-grow: 1;
+    margin-top: 240px;
+}
+
+.new-wrapper {
+    width: 230px;
+    padding: 30px;
+    align-self: flex-start;
+}
+
+.new-wrapper .new{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.new-wrapper .new input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid snow;
+    outline: none;
+    background: none;
+    color: #305d35;
+    font-size: 1.2rem;
+}
+
+.ingredient-button {
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    width: 150px;
+    height: 25px;
+    background: #305d35;
+    border: none;
+    font-size: 1rem;
+    color: snow;
+    outline: none;
+    transition: 0.4s ease-in;
+}
+
+.ingredient-button:hover {
+    background-color: #c62b27;
+    cursor: pointer;
+}
+
+.new input:focus ~ label,
+.new input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 0.9rem;
+}
+
+.new-wrapper .new label {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    color: #c62b27;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.new-wrapper .new .new-underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.new .new-underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #305d35;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.new input:focus ~ .new-underline:before,
+.new input:valid ~ .new-underline:before {
+    transform: scaleX(1);
+}
+
+
+.ingredient {
+    position: absolute;
+    width: 396px;
+    top: 40px;
+    height: 250px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-left: 20px;
+    
+}
+
+
+.button {
+    margin-top: 20px;
+}
+
+.add-button {
+    width: 200px;
+    height: 30px;
+    background: #305d35;
+    border: none;
+    font-size: 1rem;
+    color: snow;
+    outline: none;
+    transition: 0.4s ease-in;
+}
+
+.add-button:hover {
+    background-color: #c62b27;
+    cursor: pointer;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 14px 14px transparent;
+  border: solid 4px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 14px 14px #c62b27;
+  border: solid 4px transparent;
+  border-radius: 14px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.wrapper-ingredient-inputs {
+    display: flex;
+    background-color: #305d35;
+    height: 0px;
+    position: relative
+}
+
+
+.wrapper-ingredient {
+    display: flex;
+    width: 80%;
+    margin: 10px;
+    align-content: center;
+    position: relative;
+}
+
+.ingredient-inputs {
+    position: absolute;
+    top: -360px;
+    left: -220px;
+}
+
+.wrapper-ingredient > label {
+    font-size: 1.2rem;
+    padding: 5px;
+    color: #c62b27;
+}
+
+.wrapper-ingredient > label > input {
+    float: left;
+    height: 21px;
+    margin-right: 10px;
+}
+
+.delete-ingredient-button {
+    flex-grow: 1;
+    text-align: right;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #305d35;
+    transition: 0.3s ease;
+}
+
+.delete-ingredient-button:hover {
+    cursor: pointer;
+    color: #c62b27;
+}
+

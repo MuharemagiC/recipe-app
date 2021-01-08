@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/web-icons-22/32/recipe-512.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Add recipe</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Recipe</h1>
+      <form>
+        <div class="wrapper">
+          <div class="search-input">
+            <input
+              type="text"
+              name="search-input"
+              required
+              class="add-recipe"
+            />
+            <div class="underline"></div>
+            <label>Recipe name</label>
+          </div>
+        </div>
+
+        <div class="text-area">
+          <label>Description</label>
+          <textarea
+            name="description"
+            class="description"
+            cols="53.5"
+            rows="12"
+            required
+          ></textarea>
+        </div>
+
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+
+          <div class="ingredient"></div>
+        </div>
+        <div class="button">
+          <button class="add-button">Add recipe</button>
+        </div>
+      </form>
+      <div class="wrapper-ingredient-inputs">
+        <div class="new-wrapper ingredient-inputs">
+          <div class="search-input new">
+            <input type="text" required class="add-ingredient" />
+            <div class="new-underline"></div>
+            <label>Ingredient</label>
+            <button class="ingredient-button" type="button">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
